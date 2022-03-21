@@ -1,0 +1,147 @@
+.first-para {
+  text-align: center;
+  padding-bottom: 35px;
+}
+input {
+  border-radius: 5px;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  margin-top: 20px;
+  flex-direction: column;
+  width: 90%;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  border-radius: 5px;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+.subordinate {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+label {
+  /* margin-right: 90px; */
+  font-size: 20px;
+}
+option {
+  height: 30px;
+  border-radius: 5px;
+}
+
+.first {
+  height: 30px;
+  padding-right: 45px;
+}
+.btn-secton {
+  display: flex;
+}
+.main-btn {
+  border-radius: 5px;
+  background-color: lightblue;
+  padding: 5px 10px;
+}
+.last-btn {
+  border-radius: 5px;
+  background-color: aquamarine;
+  padding: 5px 10px;
+}
+.secod {
+  height: 30px;
+  margin-top: 10px;
+  padding-right: 45px;
+}
+.third {
+  height: 30px;
+  margin-top: 10px;
+  padding-right: 45px;
+}
+.fourth {
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding-right: 45px;
+}
+
+.sventh {
+  height: 30px;
+  margin-top: 10px;
+  padding-right: 45px;
+}
+.eghit {
+  height: 30px;
+  margin-top: 10px;
+  padding-right: 45px;
+}
+.nineth {
+  height: 30px;
+  margin-top: 10px;
+  padding-right: 45px;
+}
+.tenth {
+  height: 30px;
+  padding-right: 45px;
+  margin-top: 10px;
+}
+.alert-para {
+  display: flex;
+  align-items: center;
+}
+.last-section {
+  display: flex;
+  justify-content: center;
+  padding-left: 85px;
+  margin-top: 20px;
+}
+.alert-mss {
+  display: none;
+  color: red;
+}
+.alert-2 {
+  display: none;
+  color: red;
+}
+.alert-3 {
+  display: none;
+  color: red;
+}
+.alert-4 {
+  display: none;
+  color: red;
+}
+.alert-5 {
+  display: none;
+  color: red;
+}
+.alert-6 {
+  display: none;
+  color: red;
+}
+.alert-7 {
+  display: none;
+  color: red;
+}
+.alert-8 {
+  display: none;
+  color: red;
+}
+.alert-9 {
+  display: none;
+  color: red;
+}
+.alert-10 {
+  display: none;
+  color: red;
+}

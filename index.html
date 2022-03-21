@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./javascript.js"></script>
+  </head>
+  <body>
+    <div class="subordinate">
+      <div class="card">
+        <h1 class="first-para">Javascript form validation</h1>
+        <div class="main">
+          <form>
+            <table>
+              <tr>
+                <td>
+                  <label> Name </label>
+                </td>
+                <td>
+                  <div class="alert-para">
+                    <input
+                      class="first"
+                      type="text"
+                      name="name"
+                      placeholder="Enter your name"
+                      id="name"
+                    />
+
+                    <p class="alert-mss">*please enter user name</p>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label> Adress </label>
+                </td>
+                <td>
+                  <div class="alert-para">
+                    <input
+                      class="secod"
+                      type="text"
+                      name="adress"
+                      placeholder="Enter your Adress"
+                      id="adress"
+                    />
+                    <p class="alert-2">*please enter adress</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label> Zip Code</label>
+                </td>
+                <td>
+                  <div class="alert-para">
+                    <input
+                      class="third"
+                      type="number"
+                      name="zipcode"
+                      placeholder="Enter your Zip code"
+                      id="zipcode"
+                    />
+                    <p class="alert-3">*please enter zipcode</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><label>Country</label></td>
+                <td>
+                  <div class="alert-para">
+                    <select
+                      class="fourth"
+                      name="country"
+                      type="text"
+                      id="country"
+                    >
+                      <option value="select country">
+                        please select country
+                      </option>
+                      <option value="India">India</option>
+                      <option value="America">America</option>
+                      <option value="Canada">Canada</option>
+                      <option value="Poland">Poland</option>
+                    </select>
+                    <p class="alert-4">*please enter coutry</p>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label> sex </label>
+                </td>
+                <td>
+                  <div class="alert-para">
+                    <input
+                      value="male"
+                      class="fifth"
+                      type="radio"
+                      name="gender"
+                    />Male
+                    <input value="femail" type="radio" name="gender" />FeMale
+                    <p class="alert-5">*please enter gender</p>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label> Preferences </label>
+                </td>
+                <td>
+                  <div class="alert-para">
+                    <input
+                      class="sixth"
+                      type="checkbox"
+                      name="preference"
+                      value="red"
+                    />Red
+                    <input
+                      class="sixth"
+                      type="checkbox"
+                      name="preference"
+                      value="green"
+                    />Green
+                    <input
+                      class="sixth"
+                      type="checkbox"
+                      name="preference"
+                      value="blue"
+                    />Blue
+                    <p class="alert-6">*please enter Preferences</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Phone</label>
+                </td>
+                <td>
+                  <div class="alert-para">
+                    <input
+                      class="sventh"
+                      type="number"
+                      name="phone"
+                      placeholder="Enter your Phone No"
+                      id="Phone"
+                    />
+                    <p class="alert-7">*please enter Phone no</p>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label> Email</label>
+                </td>
+                <td>
+                  <div class="alert-para">
+                    <input
+                      class="eghit"
+                      type="email"
+                      name="email"
+                      placeholder="Enter your Email id"
+                      id="email"
+                    />
+                    <p class="alert-8">*please enter email</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Password (6-8 character)</label>
+                </td>
+                <td>
+                  <div class="alert-para">
+                    <input
+                      class="nineth"
+                      type="password"
+                      name="password"
+                      placeholder="Enter your Password"
+                      id="password"
+                    />
+                    <p class="alert-9">*please enter Password</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label> Varify Password</label>
+                </td>
+                <td>
+                  <div class="alert-para">
+                    <input
+                      class="tenth"
+                      type="password"
+                      name="incorrct password"
+                      placeholder="Renter your Password"
+                      id="confirmpassword"
+                    />
+                    <p class="alert-10">*not matching</p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <div class="last-section">
+              <button
+                class="main-btn"
+                type="button"
+                value="Send"
+                onclick="return validate()"
+              >
+                Send
+              </button>
+              <button
+                class="last-btn"
+                type="rest"
+                value="rest"
+                onclick="return validate()"
+              >
+                Clear
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      function validate() {
+        let firstName = document.getElementById("name").value;
+        let adress = document.getElementById("adress").value;
+        let zipcode = document.getElementById("zipcode").value;
+        let country = document.getElementById("country").value;
+        let radioBtn = document.querySelector('input[name="gender"]:checked');
+        let checkbox = document.querySelector('input[type="checkbox"]:checked');
+        let phoneNumber = document.getElementById("Phone").value;
+        const phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        let emailnm = document.getElementById("email").value;
+        const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        let password1 = document.getElementById("password").value;
+        const strongRegex = new RegExp(
+          "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})"
+        );
+        let password2 = document.getElementById("confirmpassword").value;
+
+        console.log(password1);
+        if (firstName === "") {
+          document.querySelector(".alert-mss").style.display = "block";
+
+          setTimeout(function () {
+            document.querySelector(".alert-mss").style.display = "none";
+          }, 2000);
+        } else if (adress === "") {
+          document.querySelector(".alert-2").style.display = "block";
+          setTimeout(function () {
+            document.querySelector(".alert-2").style.display = "none";
+          }, 2000);
+        } else if (zipcode === "") {
+          document.querySelector(".alert-3").style.display = "block";
+          setTimeout(function () {
+            document.querySelector(".alert-3").style.display = "none";
+          }, 2000);
+        } else if (country === "select country") {
+          document.querySelector(".alert-4").style.display = "block";
+          setTimeout(function () {
+            document.querySelector(".alert-4").style.display = "none";
+          }, 2000);
+        } else if (radioBtn === null) {
+          document.querySelector(".alert-5").style.display = "block";
+          setTimeout(function () {
+            document.querySelector(".alert-5").style.display = "none";
+          }, 2000);
+        } else if (checkbox === null) {
+          document.querySelector(".alert-6").style.display = "block";
+          setTimeout(function () {
+            document.querySelector(".alert-6").style.display = "none";
+          }, 2000);
+        } else if (phoneNumber.match(phoneno) === null) {
+          document.querySelector(".alert-7").style.display = "block";
+          setTimeout(function () {
+            document.querySelector(".alert-7").style.display = "none";
+          }, 2000);
+        } else if (emailnm.match(emailRegex) === null) {
+          document.querySelector(".alert-8").style.display = "block";
+          setTimeout(function () {
+            document.querySelector(".alert-8").style.display = "none";
+          }, 2000);
+        } else if (password1.match(strongRegex) === null) {
+          document.querySelector(".alert-9").style.display = "block";
+          setTimeout(function () {
+            document.querySelector(".alert-9").style.display = "none";
+          }, 2000);
+        } else if (password2.match(password1) === null) {
+          document.querySelector(".alert-10").style.display = "block";
+          setTimeout(function () {
+            document.querySelector(".alert-10").style.display = "none";
+          }, 2000);
+        } else {
+          alert("sucessfuuly sumitted your data");
+        }
+      }
+    </script>
+  </body>
+</html>
